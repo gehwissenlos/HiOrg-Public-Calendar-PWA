@@ -12,4 +12,4 @@ For the PWA you need to change the URL in manifest.json to your own webservers a
 
 If you want to use a light theme instead of the dark theme you can uncomment the part /* Default (light) theme */ in style.css.
 
-Page refreshes automatically at 0:27 am
+Page refreshes automatically at 0:27 am every day
