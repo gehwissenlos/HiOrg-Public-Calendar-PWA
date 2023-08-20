@@ -9,3 +9,5 @@ You can create your own calendar. Fot his you need your own link to your HiOrg S
 ![image](https://github.com/gehwissenlos/HiOrg-Public-Calendar-PWA/assets/6155210/ae70140b-30aa-4642-9382-fd8e6a005eb1)
 
 For the PWA you need to change the URL in manifest.json to your own webservers address.
+
+If you want to use a light theme instead of the dark theme you can uncomment the part /* Default (light) theme */ in style.css.
