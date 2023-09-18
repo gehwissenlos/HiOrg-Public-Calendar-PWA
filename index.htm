@@ -113,7 +113,11 @@ fetch('https://www.hiorg-server.de/termine.php?ov=badc&nuroffene=1&monate=3&typ=
 						//if (interestingItems.has(j)) {
 							let tabCell = tr.insertCell(-1);
 							if (value === 0 || value === 1) {
-								tabCell.innerHTML = dayjs.unix(respJSON[i][col[value]]).format("dd. D. MMM., HH:mm [Uhr]");
+								if (respJSON[i][col[value]]) {
+									tabCell.innerHTML = dayjs.unix(respJSON[i][col[value]]).format("dd. D. MMM., HH:mm [Uhr]");
+								} else {
+									tabCell.innerHTML = '';
+								}
 							} else if (value === 2) {
 								tabCell.innerHTML = respJSON[i][col[value]];
 								tabCell.innerHTML = tabCell.innerHTML.substr(0, 25);
