@@ -13,6 +13,8 @@
     </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/de.js"></script>
+<script>dayjs.locale('de')</script>
 <script>
 if ('serviceWorker' in navigator) {
     window.addEventListener("load", () => {
@@ -114,7 +116,7 @@ fetch('https://www.hiorg-server.de/termine.php?ov=badc&nuroffene=1&monate=3&typ=
 							let tabCell = tr.insertCell(-1);
 							if (value === 0 || value === 1) {
 								if (respJSON[i][col[value]]) {
-									tabCell.innerHTML = dayjs.unix(respJSON[i][col[value]]).format("dd. D. MMM., HH:mm [Uhr]");
+									tabCell.innerHTML = dayjs.unix(respJSON[i][col[value]]).format("dd. D. MMM, HH:mm [Uhr]");
 								} else {
 									tabCell.innerHTML = '';
 								}
