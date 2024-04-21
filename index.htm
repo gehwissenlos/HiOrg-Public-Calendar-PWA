@@ -77,7 +77,7 @@ fetch('https://www.hiorg-server.de/termine.php?ov=badc&nuroffene=1&monate=3&typ=
 				const table = document.createElement("table");
 	
 				// Define relevant columns
-				const interestingItems = new Set([0, 1, 6, 5, 2, 3])
+				const interestingItems = new Set([0, 1, 7, 6, 3, 4])
 
 				// Create table header row using the extracted headers above.
 				let tr = table.insertRow(-1); // table row.
@@ -120,12 +120,12 @@ fetch('https://www.hiorg-server.de/termine.php?ov=badc&nuroffene=1&monate=3&typ=
 								} else {
 									tabCell.innerHTML = '';
 								}
-							} else if (value === 2) {
+							} else if (value === 3) {
 								tabCell.innerHTML = respJSON[i][col[value]];
 								tabCell.innerHTML = tabCell.innerHTML.substr(0, 25);
-							} else if (value === 6 && respJSON[i][col[value]] === 'termin') {
+							} else if (value === 7 && respJSON[i][col[value]] === 'termin') {
 								tabCell.innerHTML = '📅';
-							} else if (value === 6 && respJSON[i][col[value]] === 'dienst') {
+							} else if (value === 7 && respJSON[i][col[value]] === 'dienst') {
 								tabCell.innerHTML = '🚑';
 							} else {
 								tabCell.innerHTML = respJSON[i][col[value]];
